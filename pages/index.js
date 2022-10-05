@@ -1,4 +1,4 @@
-import { Hero } from "../sections";
+import { Hero, Agency } from "../sections";
 
 const heroProps = {
   image: { src: "/img/heroimg.png", alt: "", width: 1000, height: 1680 },
@@ -6,6 +6,12 @@ const heroProps = {
   description: "Start the process here",
   ctaText: "Start",
 };
+
+const agencyProps = {
+  image: { src: "/img/heroimg.png", alt: "", width: 1000, height: 1680 },
+  title: "Managed agency selection",
+  description: "Strengthen your onboarding process",
+}
 
 export default function Home() {
   return (
@@ -21,6 +27,7 @@ export default function Home() {
       <div>
         <Hero {...heroProps} />
         {/** Other sections */}
+        <Agency {...agencyProps} />
       </div>
     </>
   );
