@@ -28,13 +28,13 @@ export const Agency = ({ image, title, description, cards, ...props }) => {
                     </StyledResponsiveItemContainer>
                 </StyledImageContainer>
                 <StyledCardContainer>
-                    <span>Card 1 CARd 1 Car 1 Card 1</span>
-                    <span>Card 2</span>
-                    <span>Card 3</span>
-
                     {
                         cards.map((card, index) => 
-                            <StyledCard key={index} header={card.header} paragraph={card.paragraph} />
+                            <StyledCard 
+                                key={index} 
+                                header={card.header} 
+                                paragraph={card.paragraph}
+                                icon={card.icon} />
                         )
                     }
                 </StyledCardContainer>
