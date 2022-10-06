@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { SectionContainer, SectionBigHeading, SectionSubheading, SectionLayoutContainer } from "~/components";
+import { Card } from "~/collections";
 
 export const StyledContainer = styled(({ height, ...props }) => <SectionContainer {...props} />)`
   display: flex;
@@ -10,25 +11,37 @@ export const StyledContainer = styled(({ height, ...props }) => <SectionContaine
 /** Here will be placed the section content like: image and card containers */
 export const StyledLayoutContainer = styled(({...props}) => <div {...props} />)`
   display: flex;
+  flex-direction: row;
   margin: 30px;
-  width: 100%;
+  width: 70%;
+
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const StyledImageContainer = styled(({ ...props }) => <div {...props} />)`
-  padding: 10px;
   width: 100%;
-  height: 100%;
+  margin: 5px;
+  padding: 10px;
   background-image: url("/img/background.png");
   background-repeat: no-repeat;
   background-size: cover;
+`;
+
+export const StyledResponsiveItemContainer = styled(({ ...props }) => <div {...props} />)`
+  max-width: 15rem;
+  max-height: 25rem;
+  width: 100%;
+  height: 100%;
   margin-left: auto;
 `;
 
 export const StyledCardContainer = styled(({ ...props}) => <div {...props} />)`
   display: flex;
+  margin: 5px;
   padding: 10px;
   flex-direction: column;
-  align-items: center;
   width: 100%;
 `;
 
@@ -49,3 +62,5 @@ export const StyledTextContainer = styled(({ ...props }) => <div {...props} />)`
   font-family: sans-serif;
   text-align: center;
 `;
+
+export const StyledCard = styled(({ ...props }) => <Card {...props}/>)``;

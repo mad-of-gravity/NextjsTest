@@ -43,3 +43,10 @@ export const StyledSectionParagraph = styled((props) => <p {...props} />)`
   line-height: 1.5rem;
   font-weight: 400;
 `;
+
+
+export const StyledCardHeading = styled(forwardRef((props, ref) => <h2 {...props} ref={ref} />))`
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-weight: 600;
+`;
