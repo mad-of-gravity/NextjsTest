@@ -7,41 +7,43 @@ const heroProps = {
   ctaText: "Start",
 };
 
-
 const agencyProps = {
   image: { src: "/img/video.png", alt: "video", width: 329, height: 525 },
   title: "Managed agency selection",
   description: "Strengthen your onboarding process",
   cards: [
-    { 
+    {
       header: "Brief",
-      paragraph: <p style={{margin: 0, padding: 0}}>
-        Complete <b>brief writing or simple guidance </b>
-         on what to include, we've got you covered.
-      </p>,
-      icon: { src: "/img/brief-icon.png", alt: "", width: 45, height: 45 }
+      paragraph: (
+        <p style={{ margin: 0, padding: 0 }}>
+          Complete <b>brief writing or simple guidance </b>
+          on what to include, we've got you covered.
+        </p>
+      ),
+      icon: { src: "/img/brief-icon.png", alt: "", width: 45, height: 45 },
     },
-    { 
-      header: "Search", 
-      paragraph: 
-      <p style={{margin: 0, padding: 0}}>
-        In-depth agency search covering;
-        <b>criteria matching</b>, door knocking
-        and due-dilligence vetting.
-      </p>,
-      icon: { src: "/img/pitch-icon.png", alt: "", width: 45, height: 45 }
+    {
+      header: "Search",
+      paragraph: (
+        <p style={{ margin: 0, padding: 0 }}>
+          In-depth agency search covering;
+          <b>criteria matching</b>, door knocking and due-dilligence vetting.
+        </p>
+      ),
+      icon: { src: "/img/pitch-icon.png", alt: "", width: 45, height: 45 },
     },
-    { 
-      header: "Pitch", 
-      paragraph:  
-      <p style={{margin: 0, padding: 0, fontFamily: "Poppins"}}>
-        Comprehensive <b>pitch management</b>,
-        including comms, diary management and pitch hosting.
-      </p>,
-      icon: { src: "/img/search-icon.png", alt: "", width: 45, height: 45 }
+    {
+      header: "Pitch",
+      paragraph: (
+        <p style={{ margin: 0, padding: 0, fontFamily: "Poppins" }}>
+          Comprehensive <b>pitch management</b>, including comms, diary
+          management and pitch hosting.
+        </p>
+      ),
+      icon: { src: "/img/search-icon.png", alt: "", width: 45, height: 45 },
     },
-  ]
-}
+  ],
+};
 
 export default function Home() {
   return (
@@ -55,10 +57,9 @@ export default function Home() {
         />
       </head>
       <div>
-        
-      <Hero {...heroProps} />
+        <Hero {...heroProps} />
         {/** Other sections */}
-        <Agency {...agencyProps}/>
+        <Agency {...agencyProps} />
       </div>
     </>
   );

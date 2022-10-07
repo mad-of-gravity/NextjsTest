@@ -38,11 +38,11 @@ export const StyledResponsiveItemContainer = styled(({ ...props }) => <div {...p
 `;
 
 export const StyledCardContainer = styled(({ ...props}) => <div {...props} />)`
-  display: flex;
+
   margin: 5px;
   padding: 10px;
-  flex-direction: column;
   width: 100%;
+
 `;
 
 export const StyledTitle = styled((props) => <SectionBigHeading {...props} />)`
