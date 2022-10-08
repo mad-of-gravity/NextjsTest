@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { useState } from "react";
+
 import {
   StyledContainer,
   StyledTextContainer,
@@ -13,7 +15,8 @@ import {
 
 import { Card } from "~/collections";
 
-export const Agency = ({ image, title, description, cards, ...props }) => {
+export const Agency = ({ image, title, description, cards, initialCardWidth, ...props }) => {
+
   return (
     <StyledContainer {...props}>
       <StyledTextContainer>
@@ -21,8 +24,8 @@ export const Agency = ({ image, title, description, cards, ...props }) => {
         <StyledDescription>{description}</StyledDescription>
       </StyledTextContainer>
       <StyledLayoutContainer>
-        <StyledImageContainer>
-          <StyledResponsiveItemContainer>
+        <StyledImageContainer className="image-container">    
+          <StyledResponsiveItemContainer className="responsive-item">
             <Image
               layout="responsive"
               src={image.src}
@@ -30,17 +33,20 @@ export const Agency = ({ image, title, description, cards, ...props }) => {
               width={image.width}
               height={image.height}
             />
-          </StyledResponsiveItemContainer>
+          </StyledResponsiveItemContainer> 
         </StyledImageContainer>
-        <StyledCardContainer>
-          {cards.map((card, index) => (
+        <StyledCardContainer className="card-container">
+          {
+            
+            cards.map((card, index) => (
             <StyledCard
               id={index}
-              linkID="0"
+              linkid="0"
               key={index}
               header={card.header}
               paragraph={card.paragraph}
               icon={card.icon}
+              style={{width: initialCardWidth[index], marginLeft: 0}}
             />
           ))}
         </StyledCardContainer>

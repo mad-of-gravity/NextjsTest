@@ -11,9 +11,9 @@ import {
 } from "./elements";
 
 //icon: { src: "/img/brief-icon.png", alt: "", width: 45, height: 45 }
-export const Card = ({ header, paragraph, icon, ...props }) => {
+export const Card = ({ header, paragraph, icon, width, ...props }) => {
   const linkTo = () => {
-    return `/#${props.linkID}`;
+    return `/#${props.linkid}`;
   };
 
   return (

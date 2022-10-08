@@ -1,14 +1,17 @@
 import { Hero, Agency } from "../sections";
 
+{/** 
 const heroProps = {
   image: { src: "/img/heroimg.png", alt: "", width: 458, height: 850 },
   title: "Agency procurement, outsourced.",
   description: "Start the process here",
   ctaText: "Start",
 };
+*/}
+
 
 const agencyProps = {
-  image: { src: "/img/video.png", alt: "video", width: 329, height: 525 },
+  image: { src: "/img/video.png", alt: "video", width: 420, height: 580},
   title: "Managed agency selection",
   description: "Strengthen your onboarding process",
   cards: [
@@ -43,6 +46,7 @@ const agencyProps = {
       icon: { src: "/img/search-icon.png", alt: "", width: 45, height: 45 },
     },
   ],
+  initialCardWidth: ["87%", "92%", "95%"],
 };
 
 export default function Home() {
